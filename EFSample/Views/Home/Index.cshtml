@@ -1,0 +1,46 @@
+﻿ @model IEnumerable<EFSample.Model.Patient>
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+<div class="flex-column col-4">
+    <div id = "PatientList">
+    </div>
+</div>
+
+</head>
+<body>
+        <header>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body class="card-body">
+
+    <h4>ДОБРО ПОЖАЛОВАТЬ В КАРТОЧКУ ПАЦИЕНТА!</h4>
+   <p>
+     <p><a asp-controller="Patients" asp-action="Index">Карточка пациента </a></p>
+      <p><a asp-controller="Doctors" asp-action="Index">Список докторов </a></p>
+      <p> <a asp-controller="Diseases" asp-action="Index">История болезней </a></p>
+</p>
+</body>
+ <link href="~/Content/themes/base/jquery.ui.all.css" rel="stylesheet" type="text/css" /><font></font>
+    <link href="~/Content/jquery.jqGrid/ui.jqgrid.css" rel="stylesheet" type="text/css" /><font></font>
+    <script src="~/Scripts/jquery-ui-1.8.11.min.js" type="text/javascript"></script><font></font>
+    <script src="~/Scripts/jquery.jqGrid.min.js" type="text/javascript"></script><font></font>
+
+    </header>
+</body>
+</html>
+

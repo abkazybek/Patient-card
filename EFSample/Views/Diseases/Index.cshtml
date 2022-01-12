@@ -1,0 +1,71 @@
+﻿@model IEnumerable<EFSample.Model.Disease>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>История болезней</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<p>
+    <a asp-action="Create">Создать жалобу</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Diagnosis)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Complaint)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.patient)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.doctor)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Diagnosis)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Complaint)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.patient.Login)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.doctor.NameofDoctor)
+            </td>
+            
+        </tr>
+}
+    </tbody>
+</table>
+ <link href="~/Content/themes/base/jquery.ui.all.css" rel="stylesheet" type="text/css" /><font></font>
+    <link href="~/Content/jquery.jqGrid/ui.jqgrid.css" rel="stylesheet" type="text/css" /><font></font>
+    <script src="~/Scripts/jquery-ui-1.8.11.min.js" type="text/javascript"></script><font></font>
+    <script src="~/Scripts/jquery.jqGrid.min.js" type="text/javascript"></script><font></font>
+</body>
+</html>
